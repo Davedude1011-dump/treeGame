@@ -1,0 +1,316 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans+Narrow&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+
+    cursor: none;
+}
+
+body {
+    overflow: hidden;
+    background-color: rgb(79, 200, 243);
+
+    cursor: url("clouds/cloud1.png"), auto;
+}
+
+.axe {
+    position: fixed;
+    z-index: 9999;
+    width: 50px;
+    height: 50px;
+    pointer-events: none;
+
+    transition: 0.05s;
+
+    background-position: center;
+    background-repeat: repeat-x;
+    background-size: contain;
+    background-image: url("data:image/svg+xml,%3Csvg height='200px' width='200px' version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' viewBox='0 0 511.981 511.981' xml:space='preserve' fill='%23000000' transform='matrix(-1, 0, 0, 1, 0, 0)'%3E%3Cg id='SVGRepo_bgCarrier' stroke-width='0'%3E%3C/g%3E%3Cg id='SVGRepo_tracerCarrier' stroke-linecap='round' stroke-linejoin='round'%3E%3C/g%3E%3Cg id='SVGRepo_iconCarrier'%3E%3Cpath style='fill:%23965353;' d='M377.799,104.535c-0.219-0.266-0.453-0.523-0.703-0.773l-45.248-45.249c-2-2-4.719-3.125-7.547-3.125 l0,0c-2.828,0-5.547,1.125-7.547,3.132L251.6,123.807c-16.218,15.953-23.609,31.25-30.749,46.046 c-8.188,16.953-15.921,32.96-37.108,51.865c-42.577,37.991-85.685,81.287-118.293,118.77C25.217,386.736,3.234,421.187,0.109,442.89 c-0.578,4.016,1.172,8,4.516,10.312l50.279,34.561c1.797,1.234,3.906,1.875,6.031,1.875c0.984,0,1.984-0.141,2.953-0.422 c3.062-0.875,5.578-3.078,6.844-6c17.812-41.107,36.827-74.185,59.857-104.121c23.64-30.718,49.936-55.623,72.545-75.935 c57.81-51.944,102.246-99.528,129.339-130.3c15.375-17.453,26.92-31.483,33.92-40.179c3.969-4.945,6.938-8.742,8.719-11.054 c0.984-1.281,1.734-2.258,2.234-2.922l0.562-0.758C381.502,113.152,380.439,107.754,377.799,104.535z'%3E%3C/path%3E%3Cpath style='opacity:0.1;fill:%23FFFFFF;enable-background:new ;' d='M362.017,88.676c0.25,0.25,0.484,0.508,0.703,0.773 c2.641,3.218,3.703,8.617,0.109,13.414l-0.578,0.758c-0.5,0.664-1.234,1.641-2.234,2.922c-1.781,2.312-4.734,6.109-8.717,11.054 c-6.984,8.695-18.547,22.726-33.906,40.178c-27.092,30.773-71.529,78.357-129.339,130.292 c-22.609,20.312-48.905,45.233-72.545,75.95c-23.03,29.937-42.06,63.014-59.872,104.107c-1.266,2.938-3.766,5.141-6.844,6.016 c-0.969,0.281-1.953,0.422-2.938,0.422c-2.141,0-4.25-0.641-6.046-1.891L0.046,445.328c0.266,3.141,1.922,6.047,4.578,7.875 l50.279,34.561c1.797,1.234,3.906,1.875,6.031,1.875c0.984,0,1.984-0.141,2.953-0.422c3.062-0.875,5.578-3.078,6.844-6 c17.812-41.107,36.827-74.185,59.857-104.121c23.64-30.718,49.936-55.623,72.545-75.935c57.81-51.944,102.246-99.528,129.339-130.3 c15.375-17.453,26.92-31.483,33.92-40.179c3.969-4.945,6.938-8.742,8.719-11.054c0.984-1.281,1.734-2.258,2.234-2.922l0.562-0.758 c3.594-4.796,2.531-10.194-0.109-13.413c-0.219-0.266-0.453-0.523-0.703-0.773l-45.248-45.249v-0.008L362.017,88.676z'%3E%3C/path%3E%3Cpath style='fill:%23CCD1D9;' d='M509.045,199.414c3.984-4.188,3.906-10.796-0.188-14.89L349.801,25.467 c-4.156-4.164-10.922-4.164-15.078,0l-45.248,45.257c-2.016,2-3.125,4.711-3.125,7.539s1.109,5.546,3.125,7.546l67.871,67.88 c1.406,1.406,2.984,2.344,4.922,2.796c1.859,0.484,7.469,2.516,11.031,6.078c2.266,2.266,3.219,4.57,3.125,7.477 c-0.156,5.008-3.734,16.304-25.826,35.678c-2.844,2.5-4.156,6.336-3.438,10.062l14.795,75.708c0.422,2.109,1.453,4.016,2.938,5.5 c0.719,0.719,1.562,1.344,2.484,1.844c2.812,1.516,6.156,1.688,9.109,0.484C437.375,274.303,506.154,202.461,509.045,199.414z'%3E%3C/path%3E%3Cg%3E%3Cpath style='fill:%23E6E9ED;' d='M417.687,93.347L349.8,25.466c-4.156-4.164-10.922-4.164-15.078,0l-45.248,45.257 c-2.016,2-3.125,4.711-3.125,7.539s1.109,5.539,3.109,7.539l67.887,67.888l0,0l0,0L417.687,93.347z'%3E%3C/path%3E%3Cpath style='fill:%23E6E9ED;' d='M508.857,184.524l-19.25-19.257c-18.264,20.109-62.936,65.248-131.121,108.442l3.469,17.78 c0.422,2.109,1.453,4.016,2.938,5.5c0.719,0.719,1.562,1.344,2.484,1.844c2.812,1.516,6.156,1.688,9.109,0.484 c60.889-25.015,129.668-96.856,132.559-99.903C513.029,195.227,512.951,188.618,508.857,184.524z'%3E%3C/path%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+.axe-rotate {
+    rotate: -45deg;
+}
+
+.background, .forground {
+    position: absolute;
+    width: 100vw;
+    height: 25vh;
+    left: 0;
+    bottom: 0;
+    
+    background-position: center;
+    background-repeat: repeat-x;
+    background-size: contain;
+    background-image: url("background-images/pixel-art-sky-background-with-clouds-cloudy-blue-sky-for-8bit-game-on-white-background-vector.jpg");
+    image-rendering: pixelated; /* Add this line */
+    animation: forground-scroll 240s linear infinite;
+    pointer-events: none;
+}
+@keyframes forground-scroll {
+    0% {
+      background-position: 0 0;
+    }
+    100% {
+      background-position: -200% 0;
+    }
+  }
+.forground {
+    z-index: 999;
+    background-image: url("background-images/pixel-art-sky-background-with-clouds-cloudy-blue-sky-for-8bit-game-on-white-background-vector-removebg-preview.png");
+    animation: forground-scroll 120s linear infinite;
+}
+
+.tree {
+    aspect-ratio: 2/3;
+    width: 900px;
+
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    translate: -50%;
+
+    image-rendering: pixelated; /* Add this line */
+    z-index: 999;
+}
+.tree-rotate-left { rotate: -1deg }
+.tree-rotate-right { rotate: 1deg }
+
+@keyframes CloudMoveAnimation {
+    from {
+        left: 0;
+        translate: -100%;
+    }
+    to {
+        left: 100vw;
+        translate: 100%
+    }
+}
+.cloud {
+    width: 200px;
+    aspect-ratio: 3/2;
+
+    position: absolute;
+    translate: -100%;
+
+    background-position: center;
+    background-repeat: repeat-x;
+    background-size: contain;
+    image-rendering: pixelated; /* Add this line */
+
+    animation: CloudMoveAnimation linear;
+    pointer-events: none;
+}
+
+@keyframes BlimpMoveAnimation {
+    from {
+        left: 0;
+        translate: -100%;
+    }
+    to {
+        left: 100vw;
+        translate: 0;
+    }
+}
+.blimp {
+    position: absolute;
+    animation: BlimpMoveAnimation 120s forwards infinite linear;
+    left: 0;
+    top: 2%;
+    height: 300px;
+    width: 580px;
+    background-image: url("data:image/svg+xml,%3Csvg width='581' height='302' viewBox='0 0 581 302' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg opacity='0.2'%3E%3Cpath d='M383.335 255.538H267.181C254.404 255.538 255.566 265.992 255.566 278.769C255.566 291.546 277.635 302 290.412 302H360.104C372.881 302 394.951 291.546 394.951 278.769C394.951 265.992 396.112 255.538 383.335 255.538Z' fill='%23231F20'/%3E%3Cpath d='M325.231 23.2308C265.992 23.2308 211.4 32.5231 167.261 47.6231C139.384 32.5231 105.7 23.2308 78.9844 23.2308H11.6151C-1.16179 27.8769 51.1074 87.1154 78.9844 108.023C73.1767 118.477 69.6921 128.931 69.6921 139.385C69.6921 148.677 72.0151 157.969 76.6613 167.262C52.269 178.877 34.8459 210.238 12.7767 232.308V234.631C4.6459 245.085 10.4536 253.215 24.3921 253.215L82.469 254.377C89.4382 254.377 121.961 239.277 152.161 224.177C198.623 243.923 259.023 255.538 325.231 255.538C466.938 255.538 580.769 203.269 580.769 139.385C580.769 75.5 466.938 23.2308 325.231 23.2308Z' fill='%23231F20'/%3E%3C/g%3E%3Cpath d='M394.951 255.538C394.951 268.315 372.881 278.769 360.104 278.769H290.412C277.635 278.769 255.566 268.315 255.566 255.538C255.566 242.762 254.404 232.308 267.181 232.308H383.335C396.112 232.308 394.951 242.762 394.951 255.538Z' fill='%234F5D73'/%3E%3Cpath d='M92.9231 92.9231C78.9847 92.9231 -4.6461 4.64615 11.6154 0H78.9847C116.154 0 169.585 18.5846 197.462 46.4615L162.615 48.7846C170.746 59.2385 164.939 67.3692 151 67.3692L92.9231 92.9231Z' fill='%23C75C5C'/%3E%3Cpath d='M83.6309 232.308C97.5694 232.308 225.339 167.262 209.077 162.615L97.5694 139.385C60.4001 139.385 41.8155 181.2 13.9386 209.077V211.4C5.80783 221.854 11.6155 229.985 25.554 229.985L83.6309 232.308Z' fill='%23C75C5C'/%3E%3Cpath d='M325.231 232.308C466.361 232.308 580.769 180.304 580.769 116.154C580.769 52.0038 466.361 0 325.231 0C184.101 0 69.6923 52.0038 69.6923 116.154C69.6923 180.304 184.101 232.308 325.231 232.308Z' fill='white'/%3E%3Cpath opacity='0.2' d='M16.2615 138.223C6.96923 138.223 0 139.385 0 130.092C0 120.8 6.96923 121.962 16.2615 121.962L151 104.538C160.292 104.538 184.685 120.8 184.685 130.092C184.685 139.385 160.292 155.646 151 155.646L16.2615 138.223Z' fill='%23231F20'/%3E%3Cpath d='M11.6154 127.769C2.32308 127.769 0 123.123 0 113.831C0 104.538 2.32308 104.538 11.6154 104.538L151 92.9231C160.292 92.9231 185.846 106.862 185.846 116.154H184.685C184.685 125.446 160.292 139.385 151 139.385L11.6154 127.769Z' fill='%23C75C5C'/%3E%3C/svg%3E");
+  }
+  #point-tracker {
+    position: absolute;
+    left: 56%;
+    top: 35%;
+    translate: -50% -50%;
+    font-size: 50px;
+    font-weight: bold;
+    font-family: Pacifico;
+    color: #da7676;
+  }
+  
+  #point-per-second-outer {
+    position: absolute;
+    left: 56%;
+    bottom: 10%;
+    translate: -50%;
+    font-size: 20px;
+    font-family: Libre Baskerville;
+    color: white;
+    font-weight: bold;
+  }
+
+
+@keyframes log-bounce {
+    0% {
+        translate: 0 0
+    }
+    65% {
+        translate: 0 -50%;
+    }
+    100% {
+        translate: 0 0;
+    }
+}
+.log {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 9999;
+    width: 50px;
+    height: 50px;
+    pointer-events: none;
+
+    animation: log-bounce 0.3s forwards 1 linear;
+
+    background-position: center;
+    background-repeat: repeat-x;
+    background-size: contain;
+    background-image: url("items images/08_Oak_Log.png");
+}
+
+
+.upgrade-travel-button {
+    border-top-left-radius: 20px;
+    bottom: 0;
+    right: 0;
+
+    border-top: 2px dashed rgba(0, 0, 0, 0.4);
+    border-left: 2px dashed rgba(0, 0, 0, 0.4);
+}
+.travel-button {
+    width: 25vw;
+    height: 75px;
+    background-color: rgba(0, 0, 0, 0.105);
+    position: absolute;
+    z-index: 9998;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transition: 0.2s;
+}
+.travel-button:hover {
+    background-color: rgba(0, 0, 0, 0.205);
+    border-color: rgba(0, 0, 0, 0.5);
+}
+.travel-button-text {
+    font-size: large;
+    font-weight: bold;
+    color: rgba(0, 0, 0, 0.7)
+}
+
+.main-area {
+    width: 100vw;
+    height: 100vh;
+}
+.upgrades-area {
+    width: 100vw;
+    height: 100vh;
+    background-image: linear-gradient(90deg, #3b95b6 25%, #43a9ce 25%, #48b3da 50%, #3b95b6 50%, #439cbd 75%, #48b3da 75%, #48b3da 100%);
+    background-position: center top;
+    background-size: 5%;
+
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.main-travel-button {
+    border-bottom-left-radius: 20px;
+    bottom: 0;
+    translate: 0 75px;
+    right: 0;
+
+    border-bottom: 2px dashed rgba(0, 0, 0, 0.4);
+    border-left: 2px dashed rgba(0, 0, 0, 0.4);
+}
+
+.upgrades-menu-outer {
+    width: 90vw;
+    height: calc(100vh - 10vw);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.upgrades-menu-inner {
+    width: 25vw;
+    height: 100%;
+    border: 8px solid rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    overflow-y: scroll;
+}
+.upgrades-menu-title {
+    color: white;
+    font-weight: bold;
+    font-size: xx-large;
+    margin-top: 1vh;
+    text-decoration: underline;
+}
+#upgrades-menu-sub-title {
+    color: white;
+    font-weight: bold;
+    font-size: large;
+    margin-top: 1vh;
+    margin-bottom: 5vh;
+}
+.upgrades-menu-button {
+    width: 90%;
+    height: 8vh;
+    min-height: 8vh;
+    background-color: #ebebeb;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+
+    border-bottom: 10px solid gray;
+    transition: 0.2s;
+}
+.upgrades-menu-button:hover {
+    border-bottom: 5px solid gray;
+    translate: 0 5px;
+    background-color: #e0e0e0;
+}
+.upgrades-menu-button-inner {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}
+.upgrades-menu-button-amount {
+    width: 20%;
+}
+.upgrades-menu-button-name {
+    width: 50%;
+    font-size: x-large;
+    font-family: PT Sans Narrow;
+}
+.upgrades-menu-button-cost {
+    width: 30%;
+    overflow-x: hidden;
+    font-size: small;
+}
+#point-tracker-upgrades {
+    color: white;
+    font-size: xxx-large;
+    translate: 0 -3vh
+}

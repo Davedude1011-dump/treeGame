@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+
+        <link rel="stylesheet" href="style.css">
+        <script src="function.js" defer></script>
+        <script src="fancyStuff.js" defer></script>
+    </head>
+    <body>
+        <div class="main-area">
+            <div class="axe"></div>
+    
+            <div class="background"></div>
+            <div class="tree" onclick="TreeClick()"></div>
+            <div class="forground"></div>
+    
+            <div class="cloud-area"></div>
+    
+            <div class="blimp">
+                <div class="point-tracker" id="point-tracker">0</div>
+                <div class="point-per-second-outer" id="point-per-second-outer">$<span class="points-per-second-tracker">1</span> /s</div>
+            </div>
+    
+            <div class="upgrade-travel-button travel-button" onclick="ScrollDown()">
+                <div class="travel-button-text">Upgrades</div>
+            </div>
+        </div>
+        <div class="upgrades-area">
+            <div class="point-tracker" id="point-tracker-upgrades">0</div>
+            <div class="main-travel-button travel-button" onclick="ScrollUp()">
+                <div class="travel-button-text">Tree Area</div>
+            </div>
+
+
+            <div class="upgrades-menu-outer">
+                <div class="upgrades-menu-inner" id="UpgradeMenu1">
+                    <div class="upgrades-menu-title">Physical</div>
+                    <div id="upgrades-menu-sub-title">
+                        $<span class="points-per-click-tracker"></span> /click
+                    </div>
+
+                    <div class="upgrades-menu-button">
+                        <div class="upgrades-menu-button-amount upgrades-menu-button-inner">0</div>
+                        <div class="upgrades-menu-button-name upgrades-menu-button-inner">Sharper Blade</div>
+                        <div class="upgrades-menu-button-cost upgrades-menu-button-inner">15</div>
+                    </div>
+                    <div class="upgrades-menu-button">
+                        <div class="upgrades-menu-button-amount upgrades-menu-button-inner">0</div>
+                        <div class="upgrades-menu-button-name upgrades-menu-button-inner">Lumberjack Strength</div>
+                        <div class="upgrades-menu-button-cost upgrades-menu-button-inner">100</div>
+                    </div>
+                    <div class="upgrades-menu-button">
+                        <div class="upgrades-menu-button-amount upgrades-menu-button-inner">0</div>
+                        <div class="upgrades-menu-button-name upgrades-menu-button-inner">Precise Strikes</div>
+                        <div class="upgrades-menu-button-cost upgrades-menu-button-inner">1100</div>
+                    </div>
+                    <div class="upgrades-menu-button">
+                        <div class="upgrades-menu-button-amount upgrades-menu-button-inner">0</div>
+                        <div class="upgrades-menu-button-name upgrades-menu-button-inner">Efficient Chopping</div>
+                        <div class="upgrades-menu-button-cost upgrades-menu-button-inner">12000</div>
+                    </div>
+                    <div class="upgrades-menu-button">
+                        <div class="upgrades-menu-button-amount upgrades-menu-button-inner">0</div>
+                        <div class="upgrades-menu-button-name upgrades-menu-button-inner">Enhanced Edge</div>
+                        <div class="upgrades-menu-button-cost upgrades-menu-button-inner">130000</div>
+                    </div>
+                    <div class="upgrades-menu-button">
+                        <div class="upgrades-menu-button-amount upgrades-menu-button-inner">0</div>
+                        <div class="upgrades-menu-button-name upgrades-menu-button-inner">Swift Swing</div>
+                        <div class="upgrades-menu-button-cost upgrades-menu-button-inner">1400000</div>
+                    </div>
+                    <div class="upgrades-menu-button">
+                        <div class="upgrades-menu-button-amount upgrades-menu-button-inner">0</div>
+                        <div class="upgrades-menu-button-name upgrades-menu-button-inner">Double Impact</div>
+                        <div class="upgrades-menu-button-cost upgrades-menu-button-inner">20000000</div>
+                    </div>
+                    <div class="upgrades-menu-button">
+                        <div class="upgrades-menu-button-amount upgrades-menu-button-inner">0</div>
+                        <div class="upgrades-menu-button-name upgrades-menu-button-inner">Solid Woodworker</div>
+                        <div class="upgrades-menu-button-cost upgrades-menu-button-inner">330000000</div>
+                    </div>
+                    <div class="upgrades-menu-button">
+                        <div class="upgrades-menu-button-amount upgrades-menu-button-inner">0</div>
+                        <div class="upgrades-menu-button-name upgrades-menu-button-inner">Ultimate Axe</div>
+                        <div class="upgrades-menu-button-cost upgrades-menu-button-inner">5100000000</div>
+                    </div>
+                    <div class="upgrades-menu-button">
+                        <div class="upgrades-menu-button-amount upgrades-menu-button-inner">0</div>
+                        <div class="upgrades-menu-button-name upgrades-menu-button-inner">Mastery of the Forest</div>
+                        <div class="upgrades-menu-button-cost upgrades-menu-button-inner">75000000000</div>
+                    </div>
+                    <div class="upgrades-menu-button">
+                        <div class="upgrades-menu-button-amount upgrades-menu-button-inner">0</div>
+                        <div class="upgrades-menu-button-name upgrades-menu-button-inner">Divine Blade</div>
+                        <div class="upgrades-menu-button-cost upgrades-menu-button-inner">1000000000000</div>
+                    </div>
+                </div>
+                <div class="upgrades-menu-inner" id="UpgradeMenu2">
+                    <div class="upgrades-menu-title">Automation</div>
+                    <div class="point-per-second-outer" id="upgrades-menu-sub-title">
+                        $<span class="points-per-second-tracker">1</span> /s
+                    </div>
+
+                    <div class="upgrades-menu-button">
+                        <div class="upgrades-menu-button-amount upgrades-menu-button-inner">0</div>
+                        <div class="upgrades-menu-button-name upgrades-menu-button-inner">Sharper Blade</div>
+                        <div class="upgrades-menu-button-cost upgrades-menu-button-inner">15</div>
+                    </div>
+                </div>
+                <div class="upgrades-menu-inner" id="UpgradeMenu3">
+                    <div class="upgrades-menu-title">Special</div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
