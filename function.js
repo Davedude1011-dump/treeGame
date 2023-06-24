@@ -4,7 +4,7 @@ var TreeStats = {
     TreeType: 4
 }
 
-var Points = 100000000
+var Points = 0
 var PointsPerSecond = 0
 var PointsPerClick = 1
 
