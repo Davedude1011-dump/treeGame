@@ -4,9 +4,15 @@ var TreeStats = {
     TreeType: 4
 }
 
-var Points = 0
+var Points = 100000000
 var PointsPerSecond = 0
 var PointsPerClick = 1
+
+setInterval(function() {
+    // Code to be executed every second
+    Points += PointsPerSecond
+    RefreshUI()
+}, 1000);
 
 function RefreshUI() {
     var PointTrackerElements = document.querySelectorAll(".point-tracker");
@@ -52,7 +58,17 @@ var Upgrades = [
         {AmountOwned: 0, Boost: 10000000, Cost: 1000000000000},
     ],
     [
-        {AmountOwned: 0, CostMultyplier: 1.1, Cost: 1000}
+        {AmountOwned: 0, Boost: 0.1, Cost: 15},
+        {AmountOwned: 0, Boost: 1, Cost: 100},
+        {AmountOwned: 0, Boost: 8, Cost: 1100},
+        {AmountOwned: 0, Boost: 47, Cost: 12000},
+        {AmountOwned: 0, Boost: 260, Cost: 130000},
+        {AmountOwned: 0, Boost: 1400, Cost: 1400000},
+        {AmountOwned: 0, Boost: 7800, Cost: 20000000},
+        {AmountOwned: 0, Boost: 44000, Cost: 330000000},
+        {AmountOwned: 0, Boost: 260000, Cost: 5100000000},
+        {AmountOwned: 0, Boost: 1600000, Cost: 75000000000},
+        {AmountOwned: 0, Boost: 10000000, Cost: 1000000000000},
     ],
     [],
 ]
