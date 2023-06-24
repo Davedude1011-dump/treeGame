@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Pacifico&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=PT+Sans+Narrow&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
 
 * {
     margin: 0;
@@ -255,7 +256,12 @@ body {
     flex-direction: column;
 
     overflow-y: scroll;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* Internet Explorer and Edge */
 }
+.upgrades-menu-inner::-webkit-scrollbar {
+    display: none;
+  }
 .upgrades-menu-title {
     color: white;
     font-weight: bold;
@@ -274,20 +280,20 @@ body {
     width: 90%;
     height: 8vh;
     min-height: 8vh;
-    background-color: #ebebeb;
+    background-color: rgb(57, 93, 117);
     margin-top: 1vh;
     margin-bottom: 1vh;
     border-radius: 10px;
     display: flex;
     flex-direction: row;
 
-    border-bottom: 10px solid gray;
+    border-bottom: 10px solid rgb(37, 54, 65);
     transition: 0.2s;
 }
 .upgrades-menu-button:hover {
-    border-bottom: 5px solid gray;
+    border-bottom: 5px solid rgb(26, 38, 46);
     translate: 0 5px;
-    background-color: #e0e0e0;
+    background-color: rgb(46, 74, 94);
 }
 .upgrades-menu-button-inner {
     height: 100%;
@@ -295,14 +301,18 @@ body {
     justify-content: center;
     align-items: center;
     font-weight: bold;
+    color: white;
 }
 .upgrades-menu-button-amount {
     width: 20%;
 }
 .upgrades-menu-button-name {
     width: 50%;
-    font-size: x-large;
-    font-family: PT Sans Narrow;
+    font-size: large;
+    font-family: Merriweather, Georgia, serif;
+    letter-spacing: -1px;
+    font-weight: bold;
+    text-shadow: -2px 2px 5px black;
 }
 .upgrades-menu-button-cost {
     width: 30%;
