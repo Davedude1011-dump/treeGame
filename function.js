@@ -21,7 +21,7 @@ var PlayerStats = {
 
   MainUpgrades: [
     [
-        {AmountOwned: 0, Boost: 0.1, Cost: 0},
+        {AmountOwned: 0, Boost: 0.1, Cost: 15},
         {AmountOwned: 0, Boost: 1, Cost: 100},
         {AmountOwned: 0, Boost: 8, Cost: 1100},
         {AmountOwned: 0, Boost: 47, Cost: 12000},
