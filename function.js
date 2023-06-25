@@ -1,6 +1,6 @@
 var TreeElement = document.querySelector(".tree")
 
-var ForceDataRefresh = true
+var ForceDataRefresh = false
 
 var PlayerStats = {
   PlayerSettings: {
