@@ -6,8 +6,6 @@
     margin: 0;
     padding: 0;
     font-family: sans-serif;
-
-    cursor: none;
 }
 
 body {
@@ -15,6 +13,7 @@ body {
     background-color: rgb(79, 200, 243);
 
     cursor: url("clouds/cloud1.png"), auto;
+    user-select: none;
 }
 
 .axe {
@@ -128,7 +127,7 @@ body {
     width: 580px;
     background-image: url("data:image/svg+xml,%3Csvg width='581' height='302' viewBox='0 0 581 302' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg opacity='0.2'%3E%3Cpath d='M383.335 255.538H267.181C254.404 255.538 255.566 265.992 255.566 278.769C255.566 291.546 277.635 302 290.412 302H360.104C372.881 302 394.951 291.546 394.951 278.769C394.951 265.992 396.112 255.538 383.335 255.538Z' fill='%23231F20'/%3E%3Cpath d='M325.231 23.2308C265.992 23.2308 211.4 32.5231 167.261 47.6231C139.384 32.5231 105.7 23.2308 78.9844 23.2308H11.6151C-1.16179 27.8769 51.1074 87.1154 78.9844 108.023C73.1767 118.477 69.6921 128.931 69.6921 139.385C69.6921 148.677 72.0151 157.969 76.6613 167.262C52.269 178.877 34.8459 210.238 12.7767 232.308V234.631C4.6459 245.085 10.4536 253.215 24.3921 253.215L82.469 254.377C89.4382 254.377 121.961 239.277 152.161 224.177C198.623 243.923 259.023 255.538 325.231 255.538C466.938 255.538 580.769 203.269 580.769 139.385C580.769 75.5 466.938 23.2308 325.231 23.2308Z' fill='%23231F20'/%3E%3C/g%3E%3Cpath d='M394.951 255.538C394.951 268.315 372.881 278.769 360.104 278.769H290.412C277.635 278.769 255.566 268.315 255.566 255.538C255.566 242.762 254.404 232.308 267.181 232.308H383.335C396.112 232.308 394.951 242.762 394.951 255.538Z' fill='%234F5D73'/%3E%3Cpath d='M92.9231 92.9231C78.9847 92.9231 -4.6461 4.64615 11.6154 0H78.9847C116.154 0 169.585 18.5846 197.462 46.4615L162.615 48.7846C170.746 59.2385 164.939 67.3692 151 67.3692L92.9231 92.9231Z' fill='%23C75C5C'/%3E%3Cpath d='M83.6309 232.308C97.5694 232.308 225.339 167.262 209.077 162.615L97.5694 139.385C60.4001 139.385 41.8155 181.2 13.9386 209.077V211.4C5.80783 221.854 11.6155 229.985 25.554 229.985L83.6309 232.308Z' fill='%23C75C5C'/%3E%3Cpath d='M325.231 232.308C466.361 232.308 580.769 180.304 580.769 116.154C580.769 52.0038 466.361 0 325.231 0C184.101 0 69.6923 52.0038 69.6923 116.154C69.6923 180.304 184.101 232.308 325.231 232.308Z' fill='white'/%3E%3Cpath opacity='0.2' d='M16.2615 138.223C6.96923 138.223 0 139.385 0 130.092C0 120.8 6.96923 121.962 16.2615 121.962L151 104.538C160.292 104.538 184.685 120.8 184.685 130.092C184.685 139.385 160.292 155.646 151 155.646L16.2615 138.223Z' fill='%23231F20'/%3E%3Cpath d='M11.6154 127.769C2.32308 127.769 0 123.123 0 113.831C0 104.538 2.32308 104.538 11.6154 104.538L151 92.9231C160.292 92.9231 185.846 106.862 185.846 116.154H184.685C184.685 125.446 160.292 139.385 151 139.385L11.6154 127.769Z' fill='%23C75C5C'/%3E%3C/svg%3E");
   }
-  #point-tracker {
+  #log-tracker {
     position: absolute;
     left: 56%;
     top: 35%;
@@ -139,7 +138,7 @@ body {
     color: #da7676;
   }
   
-  #point-per-second-outer {
+  #log-per-second-outer {
     position: absolute;
     left: 56%;
     bottom: 10%;
@@ -230,8 +229,7 @@ body {
 
 .main-travel-button {
     border-bottom-left-radius: 20px;
-    bottom: 0;
-    translate: 0 75px;
+    top: 100vh;
     right: 0;
 
     border-bottom: 2px dashed rgba(0, 0, 0, 0.4);
@@ -319,8 +317,93 @@ body {
     overflow-x: hidden;
     font-size: small;
 }
-#point-tracker-upgrades {
+#log-tracker-upgrades {
     color: white;
     font-size: xxx-large;
     translate: 0 -3vh
+}
+
+
+
+
+.settings-area {
+    width: 100vw;
+    height: 100vh;
+
+    background-image: linear-gradient(rgba(128, 128, 128, 0.65), rgba(128, 128, 128, 0.65)), url("background-images/Screenshot 2023-06-25 110556.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.settings-travel-button {
+    border-top-right-radius: 20px;
+    bottom: 0;
+    left: 0;
+
+    border-top: 2px dashed rgba(0, 0, 0, 0.4);
+    border-right: 2px dashed rgba(0, 0, 0, 0.4);
+}
+.settings-to-main-travel-button {
+    border-bottom-right-radius: 20px;
+    top: 200vh;
+    left: 0;
+
+    border-bottom: 2px dashed rgba(255, 255, 255, 0.6);
+    border-right: 2px dashed rgba(255, 255, 255, 0.6);
+}
+.settings-to-main-travel-button:hover {
+    border-bottom: 2px dashed rgba(255, 255, 255, 0.5);
+    border-right: 2px dashed rgba(255, 255, 255, 0.5);
+}
+.settings-outer-box {
+    width: 85vw;
+    height: calc(100vh - 15vw);
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.settings-inner-box {
+    width: 24%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.15);
+    border-radius: 20px;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.settings-inner-box-title {
+    color: white;
+    font-size: xx-large;
+    font-family: Merriweather, Georgia, serif;
+    letter-spacing: -1px;
+    font-weight: bold;
+    text-decoration: underline;
+    text-shadow: -2px 2px 5px black;
+    margin-top: 2vh;
+    margin-bottom: 5vh;
+}
+.settings-inner-box-label {
+    color: white;
+    font-size: xx-large;
+    letter-spacing: -1px;
+    font-weight: bold;
+    text-shadow: -1px 1px 5px black;
+}
+.settings-inner-box-form {
+    height: fit-content;
+    width: fit-content;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.settings-inner-box-checkbox {
+    margin-left: 1vw;
 }

@@ -5,9 +5,15 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Document</title>
 
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css" rel="stylesheet">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+
         <link rel="stylesheet" href="style.css">
         <script src="function.js" defer></script>
-        <script src="fancyStuff.js" defer></script>
+        <script src="animations+scroll.js" defer></script>
+        <script src="upgrade.js" defer></script>
     </head>
     <body>
         <div class="main-area">
@@ -20,17 +26,20 @@
             <div class="cloud-area"></div>
     
             <div class="blimp">
-                <div class="point-tracker" id="point-tracker">0</div>
-                <div class="point-per-second-outer" id="point-per-second-outer">$<span class="points-per-second-tracker">1</span> /s</div>
+                <div class="log-tracker" id="log-tracker">0</div>
+                <div class="log-per-second-outer" id="log-per-second-outer">$<span class="logs-per-second-tracker">1</span> /s</div>
             </div>
     
-            <div class="upgrade-travel-button travel-button" onclick="ScrollDown()">
+            <div class="upgrade-travel-button travel-button" onclick="ScrollDown(1)">
                 <div class="travel-button-text">Upgrades</div>
+            </div>
+            <div class="settings-travel-button travel-button" onclick="ScrollDown(2)">
+                <div class="travel-button-text">Settings</div>
             </div>
         </div>
         <div class="upgrades-area">
-            <div class="point-tracker" id="point-tracker-upgrades">0</div>
-            <div class="main-travel-button travel-button" onclick="ScrollUp()">
+            <div class="log-tracker" id="log-tracker-upgrades">0</div>
+            <div class="main-travel-button travel-button" onclick="ScrollUp(1)">
                 <div class="travel-button-text">Tree Area</div>
             </div>
 
@@ -39,7 +48,7 @@
                 <div class="upgrades-menu-inner" id="UpgradeMenu1">
                     <div class="upgrades-menu-title">Physical</div>
                     <div id="upgrades-menu-sub-title">
-                        $<span class="points-per-click-tracker"></span> /click
+                        $<span class="logs-per-click-tracker"></span> /click
                     </div>
 
                     <div class="upgrades-menu-button">
@@ -100,8 +109,8 @@
                 </div>
                 <div class="upgrades-menu-inner" id="UpgradeMenu2">
                     <div class="upgrades-menu-title">Automation</div>
-                    <div class="point-per-second-outer" id="upgrades-menu-sub-title">
-                        $<span class="points-per-second-tracker">1</span> /s
+                    <div class="log-per-second-outer" id="upgrades-menu-sub-title">
+                        $<span class="logs-per-second-tracker">1</span> /s
                     </div>
 
                     <div class="upgrades-menu-button">
@@ -162,6 +171,30 @@
                 </div>
                 <div class="upgrades-menu-inner" id="UpgradeMenu3">
                     <div class="upgrades-menu-title">Special</div>
+                </div>
+            </div>
+        </div>
+        <div class="settings-area">
+            <div class="settings-to-main-travel-button travel-button" onclick="ScrollUp(2)">
+                <div class="travel-button-text" style="color: white">Tree Area</div>
+            </div>
+
+            <div class="settings-outer-box">
+                <div class="settings-inner-box">
+                    <div class="settings-inner-box-title">UI</div>
+                    <form action="" class="settings-inner-box-form">
+                        <label for="CustomCursor" class="settings-inner-box-label">Axe Cursor</label>
+                        <input type="checkbox" id="CustomCursor" class="settings-inner-box-checkbox" onchange="ToggleCustomCursor()">
+                    </form>
+                </div>
+                <div class="settings-inner-box">
+                    <div class="settings-inner-box-title">Sound</div>
+                </div>
+                <div class="settings-inner-box">
+
+                </div>
+                <div class="settings-inner-box">
+
                 </div>
             </div>
         </div>
